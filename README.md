@@ -1,17 +1,18 @@
-# Large Neighborhood Prioritized Search for Combinatorial Optimization with Answer Set Programming
+# Heulingo
 
-<!-- The heulingo solver is an ASP-based implementation of Large Neighborhood Prioritized Search (LNPS). -->
-<!-- LNPS is an integration of systematic prioritized-search and SLS-based large neighborhood search -->
-<!-- for solving combinatorial optimization problems. -->
-<!-- LNPS starts with an initial solution and then iteratively tries to find improved solutions -->
-<!-- by alternately destroying and prioritized-searching a current incumbent solution. -->
-<!-- LNPS can not only find near-optimal solutions within a reasonable amount of computation time -->
-<!-- but also guarantee the optimality of obtained solutions. -->
+The _heulingo_ solver is an ASP-based implementation of _large neighborhood prioritized search_ (LNPS).
+LNPS is an integration of systematic prioritized-search and SLS-based large neighborhood search for solving combinatorial optimization problems.
+
+LNPS starts with an initial solution and then iteratively tries to find improved solutions by alternately destroying and prioritized-searching a current incumbent solution.
+LNPS can not only find near-optimal solutions within a reasonable amount of computation time but also guarantee the optimality of obtained solutions.
+
+> Irumi Sugimori, Katsumi Inoue, Hidetomo Nabeshima, Torsten Schaub, Takehide Soh, Naoyuki Tamura, Mutsunori Banbara: Large Neighborhood Prioritized Search for Combinatorial Optimization with Answer Set Programming. KR 2024
 
 ## Requirements
-- [clingo](https://potassco.org/clingo/) version 5.6 or higher
 
-## Sample sessions
+- [clingo](https://potassco.org/clingo/) ≥ 5.6
+
+## Sample Sessions
 
 ### Traveling Salesperson Problem
 
@@ -33,13 +34,13 @@ python3 solver/heulingo.py --heulingo-configuration=spg benchmark/spg/sudoku.lp 
 
 ### Weighted Strategic Companies
 
-#### wstratcomp_001-050
+- `wstratcomp_001-050`
 
 ```
 python3 solver/heulingo.py --heulingo-configuration=wsc,large benchmark/wsc/wsc.lp benchmark/wsc/instances/wstratcomp_001.lp benchmark/wsc/configs/random_N.lp -c n=7
 ```
 
-#### wstratcomp_051-061
+- `wstratcomp_051-061`
 
 ```
 python3 solver/heulingo.py --heulingo-configuration=wsc,medium benchmark/wsc/wsc.lp benchmark/wsc/instances/wstratcomp_051.lp benchmark/wsc/configs/random_N.lp -c n=7
